@@ -1,0 +1,149 @@
+/* Premium CSS Variables Design System */
+:root {
+  /* Fonts */
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', Courier, monospace;
+
+  /* Font Scale Defaults (Normal) */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+  --font-3xl: 1.875rem;
+  --font-4xl: 2.25rem;
+
+  /* Theme Palette - Clean Teal / Emerald (Healthcare Theme) */
+  --primary-hue: 162;
+  --primary: hsl(var(--primary-hue), 85%, 38%);
+  --primary-hover: hsl(var(--primary-hue), 85%, 30%);
+  --primary-light: hsl(var(--primary-hue), 85%, 94%);
+  --primary-glow: hsla(var(--primary-hue), 85%, 38%, 0.15);
+
+  --secondary: #0f172a;
+  
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-popover: #ffffff;
+  --border-color: #e2e8f0;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --text-on-primary: #ffffff;
+
+  /* Vital Sign Specific Colors */
+  --color-systolic: #ef4444;  /* Red */
+  --color-diastolic: #3b82f6; /* Blue */
+  --color-glucose: #f59e0b;   /* Orange/Yellow */
+  --color-heart: #ec4899;     /* Pink */
+  
+  /* Status Colors */
+  --success: #10b981;
+  --success-light: #ecfdf5;
+  --warning: #f59e0b;
+  --warning-light: #fffbeb;
+  --danger: #ef4444;
+  --danger-light: #fef2f2;
+  
+  /* UI details */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-glow: 0 10px 25px -5px hsla(var(--primary-hue), 85%, 38%, 0.12);
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --max-width-app: 1200px;
+}
+
+/* Dark Theme overrides */
+.dark-theme {
+  --bg-app: #090d16;
+  --bg-card: #111827;
+  --bg-popover: #1f2937;
+  --border-color: #1f2937;
+  
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-muted: #6b7280;
+  
+  --primary-light: hsl(var(--primary-hue), 85%, 15%);
+  --secondary: #f8fafc;
+  
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+/* High Contrast mode overrides */
+.high-contrast {
+  --primary: #004d40;
+  --primary-hover: #00251a;
+  --primary-light: #e0f2f1;
+  --text-primary: #000000;
+  --text-secondary: #1a1a1a;
+  --text-muted: #3d3d3d;
+  --bg-app: #ffffff;
+  --bg-card: #ffffff;
+  --border-color: #000000;
+  
+  --color-systolic: #b91c1c;
+  --color-diastolic: #1d4ed8;
+  --color-glucose: #d97706;
+  --color-heart: #be185d;
+  
+  --success: #047857;
+  --warning: #b45309;
+  --danger: #b91c1c;
+
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  
+  /* Thick borders for high-contrast clarity */
+  border-width: 2px !important;
+}
+
+.high-contrast.dark-theme {
+  --primary: #80cbc4;
+  --primary-hover: #b2dfdb;
+  --primary-light: #004d40;
+  --text-primary: #ffffff;
+  --text-secondary: #f3f4f6;
+  --text-muted: #cbd5e1;
+  --bg-app: #000000;
+  --bg-card: #000000;
+  --border-color: #ffffff;
+  
+  --color-systolic: #f87171;
+  --color-diastolic: #60a5fa;
+  --color-glucose: #fbbf24;
+  --color-heart: #f472b6;
+}
+
+/* Font Scales for Accessibility */
+.font-large {
+  --font-xs: 0.875rem;
+  --font-sm: 1rem;
+  --font-base: 1.125rem;
+  --font-lg: 1.25rem;
+  --font-xl: 1.5rem;
+  --font-2xl: 1.75rem;
+  --font-3xl: 2.25rem;
+  --font-4xl: 2.75rem;
+}
+
+.font-xlarge {
+  --font-xs: 1rem;
+  --font-sm: 1.125rem;
+  --font-base: 1.25rem;
+  --font-lg: 1.5rem;
+  --font-xl: 1.75rem;
+  --font-2xl: 2rem;
+  --font-3xl: 2.75rem;
+  --font-4xl: 3.25rem;
+}
